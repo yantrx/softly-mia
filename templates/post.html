@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} · softly, mia ♡{% endblock %}
+{% block description %}{{ post.excerpt }}{% endblock %}
+{% block og_title %}{{ post.title }} · softly, mia ♡{% endblock %}
+
+{% block content %}
+<article class="post">
+    <header class="post-hero">
+        <div class="container post-hero-inner">
+            <a class="back-link reveal" href="{{ url_for('journal', lang=lang) }}">
+                <span aria-hidden="true">←</span> {{ t.post.back }}
+            </a>
+
+            <div class="post-meta reveal">
+                <a class="post-category" href="{{ url_for('journal', lang=lang, category=post.category) }}">{{ t.categories[post.category] }}</a>
+                <span class="meta-dot" aria-hidden="true">·</span>
+                <time datetime="{{ post.published_at }}">{{ post.date }}</time>
+                <span class="meta-dot" aria-hidden="true">·</span>
+                <span>{{ post.reading_time }} {{ t.common.min_read }}</span>
+            </div>
+
+            <h1 class="post-title reveal">{{ post.title }}</h1>
+            <p class="post-dek reveal">{{ post.excerpt }}</p>
+            <p class="post-byline reveal">{{ t.post.article_by }} <span aria-hidden="true">♡</span></p>
+        </div>
+    </header>
+
+    <figure class="post-cover reveal">
+        <img src="{{ url_for('static', filename=post.cover) }}" alt="" width="1200" height="900">
+        <span class="post-cover-tape" aria-hidden="true"></span>
+    </figure>
+
+    <div class="container">
+        <div class="post-body">
+            {% for paragraph in post.paragraphs %}
+                <p class="{% if loop.first %}post-lead{% endif %}">{{ paragraph }}</p>
+                {% if loop.index == 2 and post.quote %}
+                    <blockquote class="post-quote reveal">
+                        <p>{{ post.quote }}</p>
+                        <span class="post-quote-heart" aria-hidden="true">♡</span>
+                    </blockquote>
+                {% endif %}
+            {% endfor %}
+
+            <div class="post-end">
+                <span class="post-end-heart" aria-hidden="true">♡</span>
+                <p class="signature">{{ t.post.signature }}</p>
+
+                <div class="post-actions">
+                    {% with show_like_word = true %}
+                        {% include "partials/like_button.html" %}
+                    {% endwith %}
+                    <a class="btn btn--ghost btn--small" href="{{ url_for('journal', lang=lang) }}">
+                        {{ t.post.back }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+{% if related %}
+<section class="section related-section">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow reveal">{{ t.journal.related_eyebrow }}</p>
+                <h2 class="section-title reveal">{{ t.journal.related }}</h2>
+            </div>
+            <a class="section-link reveal" href="{{ url_for('journal', lang=lang) }}">{{ t.common.all_posts }} <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="post-grid">
+            {% for post in related %}
+                {% include "partials/post_card.html" %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

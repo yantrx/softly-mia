@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.journal.title }} · softly, mia ♡{% endblock %}
+{% block description %}{{ t.journal.intro }}{% endblock %}
+{% block og_title %}{{ t.journal.title }} · softly, mia ♡{% endblock %}
+
+{% block content %}
+<section class="page-hero page-hero--journal">
+    <div class="container page-hero-inner">
+        <p class="eyebrow reveal">{{ t.journal.eyebrow }} <span aria-hidden="true">✧</span></p>
+        <h1 class="page-title reveal">{{ t.journal.title }}</h1>
+        <p class="page-intro reveal">{{ t.journal.intro }}</p>
+        <span class="page-hero-heart" aria-hidden="true">♡</span>
+    </div>
+</section>
+
+<section class="section section--tight">
+    <div class="container">
+        <div class="journal-toolbar">
+            <nav class="filter-list reveal" aria-label="{{ t.journal.filters }}">
+                {% for filter in filters %}
+                    <a class="filter-pill{% if filter.active %} is-active{% endif %}"
+                       href="{{ filter.url }}"
+                       {% if filter.active %}aria-current="page"{% endif %}>
+                        {{ filter.label }}
+                    </a>
+                {% endfor %}
+            </nav>
+            <p class="journal-count reveal">{{ count_notes(posts|length) }}</p>
+        </div>
+
+        {% if selected_category %}
+            <p class="journal-selected reveal">
+                {{ t.journal.filtered }}: <strong>{{ t.categories[selected_category] }}</strong>
+            </p>
+        {% endif %}
+
+        {% if posts %}
+            <div class="post-grid post-grid--journal">
+                {% for post in posts %}
+                    {% with card_heading = 'h2' %}
+                        {% include "partials/post_card.html" %}
+                    {% endwith %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-state reveal">
+                <span class="empty-heart" aria-hidden="true">♡</span>
+                <p>{{ t.journal.empty }}</p>
+                <a class="btn btn--ghost" href="{{ url_for('journal', lang=lang) }}">{{ t.journal.clear }}</a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

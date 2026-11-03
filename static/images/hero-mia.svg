@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">A soft illustrated portrait of Mia</title>
+  <desc id="desc">An editorial illustration of a young woman with brown hair, a cream blouse and a pink tulip.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F7DCE4"/>
+      <stop offset=".55" stop-color="#F4E3E7"/>
+      <stop offset="1" stop-color="#EAE2F3"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".15" r=".75">
+      <stop offset="0" stop-color="#FFF9F5" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#FFF9F5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hair" x1=".2" y1="0" x2=".85" y2="1">
+      <stop offset="0" stop-color="#6A4A4B"/>
+      <stop offset=".55" stop-color="#53383E"/>
+      <stop offset="1" stop-color="#3E2A30"/>
+    </linearGradient>
+    <radialGradient id="skin" cx=".45" cy=".38" r=".78">
+      <stop offset="0" stop-color="#F7D9CC"/>
+      <stop offset=".7" stop-color="#EEBFB1"/>
+      <stop offset="1" stop-color="#E3A99B"/>
+    </radialGradient>
+    <linearGradient id="blouse" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#FFFBF6"/>
+      <stop offset=".6" stop-color="#F9EDE7"/>
+      <stop offset="1" stop-color="#EFDCD6"/>
+    </linearGradient>
+    <linearGradient id="petal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E7A1B3"/>
+      <stop offset="1" stop-color="#C9768E"/>
+    </linearGradient>
+    <radialGradient id="cheek" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#E79AA6" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#E79AA6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope=".55"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1125" fill="url(#bg)"/>
+  <rect width="900" height="1125" fill="url(#glow)"/>
+  <circle cx="140" cy="230" r="170" fill="#F8DDE5" opacity=".6" filter="url(#soft)"/>
+  <circle cx="790" cy="870" r="210" fill="#DCD0EA" opacity=".55" filter="url(#soft)"/>
+
+  <!-- soft window light -->
+  <g opacity=".45">
+    <rect x="646" y="0" width="254" height="1125" fill="#FFF9F5"/>
+    <rect x="728" y="0" width="6" height="1125" fill="#E8D8D6"/>
+    <rect x="646" y="270" width="254" height="6" fill="#E8D8D6"/>
+    <rect x="646" y="690" width="254" height="6" fill="#E8D8D6"/>
+  </g>
+
+  <!-- arch behind the figure -->
+  <path d="M168 1125V566c0-202 128-326 282-326s282 124 282 326v559Z" fill="#E9DDF0" opacity=".72"/>
+  <path d="M198 1125V576c0-185 116-300 252-300s252 115 252 300v549Z" fill="none" stroke="#FFF9F5" stroke-opacity=".55" stroke-width="2"/>
+
+  <!-- decorative hearts -->
+  <g fill="#D98FA5" opacity=".48">
+    <path d="M740 214c0-13 17-21 27-11l7 7 7-7c10-10 27-2 27 11 0 18-26 31-34 36-8-5-34-18-34-36Z" transform="rotate(12 774 226)"/>
+    <path d="M124 760c0-8 11-14 18-7l4.5 4.5 4.5-4.5c7-7 18-1 18 7 0 12-17 21-22.5 24-5.5-3-22.5-12-22.5-24Z"/>
+  </g>
+  <path d="M156 330c.9 8.5 5.3 12.9 13.8 13.8-8.5.9-12.9 5.3-13.8 13.8-.9-8.5-5.3-12.9-13.8-13.8 8.5-.9 12.9-5.3 13.8-13.8Z" fill="#FFF9F5" opacity=".85"/>
+
+  <!-- hair behind the face -->
+  <path d="M247 884c-28-127-17-323 31-442 41-102 106-152 172-152s131 50 172 152c48 119 59 315 31 442-19 87-65 140-128 144-35-30-115-30-150 0-63-4-109-57-128-144Z" fill="url(#hair)"/>
+
+  <!-- neck and chest -->
+  <path d="M388 612v106c0 35 26 62 62 62s62-27 62-62V612Z" fill="#E4AA9C"/>
+  <path d="M391 612v85c25 21 93 22 118 0v-85Z" fill="#D99589" opacity=".42"/>
+
+  <!-- shoulders / blouse -->
+  <path d="M150 1125c8-181 94-285 244-300l56 87 56-87c150 15 236 119 244 300Z" fill="url(#blouse)"/>
+  <path d="M340 844c33 78 69 112 110 112s77-34 110-112c-23 91-53 142-110 142s-87-51-110-142Z" fill="#E8B2A4"/>
+  <path d="M340 844c24 28 61 44 110 44s86-16 110-44" fill="none" stroke="#DCA091" stroke-width="2" opacity=".6"/>
+
+  <!-- face -->
+  <ellipse cx="450" cy="487" rx="143" ry="181" fill="url(#skin)"/>
+  <ellipse cx="450" cy="487" rx="143" ry="181" fill="none" stroke="#E1A99C" stroke-width="1.5" opacity=".45"/>
+
+  <!-- ears -->
+  <ellipse cx="305" cy="505" rx="24" ry="39" fill="#EAB6A9"/>
+  <ellipse cx="595" cy="505" rx="24" ry="39" fill="#EAB6A9"/>
+  <path d="M300 493c11 5 14 19 7 30" fill="none" stroke="#D79A8E" stroke-width="2.3" stroke-linecap="round" opacity=".7"/>
+  <path d="M600 493c-11 5-14 19-7 30" fill="none" stroke="#D79A8E" stroke-width="2.3" stroke-linecap="round" opacity=".7"/>
+
+  <!-- blush -->
+  <ellipse cx="356" cy="574" rx="44" ry="24" fill="url(#cheek)"/>
+  <ellipse cx="544" cy="574" rx="44" ry="24" fill="url(#cheek)"/>
+
+  <!-- eyebrows -->
+  <path d="M372 466c18-14 45-14 62-2" fill="none" stroke="#5A3B40" stroke-width="5.2" stroke-linecap="round" opacity=".75"/>
+  <path d="M466 464c17-12 44-12 62 2" fill="none" stroke="#5A3B40" stroke-width="5.2" stroke-linecap="round" opacity=".75"/>
+
+  <!-- closed eyes -->
+  <path d="M377 509c16 16 38 16 55 0" fill="none" stroke="#4A3439" stroke-width="4.3" stroke-linecap="round"/>
+  <path d="M468 509c17 16 39 16 55 0" fill="none" stroke="#4A3439" stroke-width="4.3" stroke-linecap="round"/>
+  <g stroke="#4A3439" stroke-width="3" stroke-linecap="round" opacity=".85">
+    <path d="M378 511l-7 8"/>
+    <path d="M388 516l-4 9"/>
+    <path d="M549 511l7 8"/>
+    <path d="M539 516l4 9"/>
+  </g>
+
+  <!-- nose -->
+  <path d="M450 516c-5 27-8 44 2 50 6 4 14 1 19-5" fill="none" stroke="#C98F86" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+
+  <!-- freckles -->
+  <g fill="#C88178" opacity=".5">
+    <circle cx="385" cy="566" r="2.2"/>
+    <circle cx="399" cy="560" r="1.8"/>
+    <circle cx="411" cy="570" r="2"/>
+    <circle cx="515" cy="568" r="2.1"/>
+    <circle cx="528" cy="559" r="1.8"/>
+    <circle cx="540" cy="571" r="2"/>
+  </g>
+
+  <!-- lips -->
+  <path d="M410 602c13-12 27-15 40-7 13-8 27-5 40 7-14 21-27 28-40 28s-26-7-40-28Z" fill="#C8758E"/>
+  <path d="M421 602c10-5 20-4 29 4 9-8 19-9 29-4" fill="none" stroke="#A95B73" stroke-width="1.8" stroke-linecap="round" opacity=".65"/>
+  <path d="M447 621c2 3 5 3 7 0" fill="none" stroke="#B5647C" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+
+  <!-- hair front / bangs -->
+  <path d="M301 455c5-121 66-196 149-196 84 0 145 75 150 196-31-63-76-102-150-102s-118 39-149 102Z" fill="url(#hair)"/>
+  <path d="M301 455c-13 102-8 242 10 364 9-117 9-258 25-364-12 27-23 35-35 0Z" fill="url(#hair)"/>
+  <path d="M599 455c13 102 8 242-10 364-9-117-9-258-25-364 12 27 23 35 35 0Z" fill="url(#hair)"/>
+  <path d="M339 457c18-70 57-110 111-110 53 0 92 40 110 110-37-43-72-64-110-64-39 0-74 21-111 64Z" fill="#5F4144" opacity=".55"/>
+  <g fill="none" stroke="#7C5A59" stroke-width="2.4" stroke-linecap="round" opacity=".45">
+    <path d="M365 330c-23 76-25 215-18 348"/>
+    <path d="M542 318c24 75 28 218 21 358"/>
+  </g>
+
+  <!-- pearl earrings -->
+  <circle cx="305" cy="655" r="10" fill="#FFF5EC"/>
+  <circle cx="302" cy="652" r="3" fill="#FFFDF9"/>
+  <circle cx="595" cy="655" r="10" fill="#FFF5EC"/>
+  <circle cx="592" cy="652" r="3" fill="#FFFDF9"/>
+
+  <!-- necklace -->
+  <path d="M365 812c22 39 51 58 85 58s63-19 85-58" fill="none" stroke="#C7A075" stroke-width="2.2" opacity=".9"/>
+  <g fill="#FFF6EC">
+    <circle cx="395" cy="840" r="5"/>
+    <circle cx="420" cy="855" r="5"/>
+    <circle cx="450" cy="860" r="5.5"/>
+    <circle cx="480" cy="855" r="5"/>
+    <circle cx="505" cy="840" r="5"/>
+  </g>
+
+  <!-- hand and tulip -->
+  <path d="M584 790c-20-37-32-74-16-102 12-22 35-25 49-9 11 12 8 27 2 38 14-7 27-4 33 8 7 14-2 28-15 35 10 10 10 23 1 33-11 12-30 14-54-3Z" fill="#EFBFB1"/>
+  <g fill="none" stroke="#D89B8E" stroke-width="2.2" stroke-linecap="round" opacity=".75">
+    <path d="M603 700c8 6 13 15 14 26"/>
+    <path d="M616 737c7 6 10 13 9 21"/>
+    <path d="M606 772c7 4 11 10 12 17"/>
+  </g>
+  <path d="M602 700c5-92 5-188 3-268" fill="none" stroke="#7D8B6D" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M604 592c-35-15-55-4-67 31 30 9 53-2 67-31Z" fill="#8B9877"/>
+  <path d="M604 654c35-17 58-8 73 24-30 13-55 5-73-24Z" fill="#7D8B6D"/>
+  <g>
+    <path d="M580 444c-17-21-14-53 7-68 20 13 25 44 12 68Z" fill="url(#petal)"/>
+    <path d="M631 443c17-21 14-53-7-68-20 13-25 44-12 68Z" fill="url(#petal)"/>
+    <path d="M604 386c-14 0-25 14-25 35 0 20 11 37 25 46 14-9 25-26 25-46 0-21-11-35-25-35Z" fill="#D98FA5"/>
+    <path d="M604 399c-7 8-10 20-10 31 0 14 4 25 10 33 6-8 10-19 10-33 0-11-3-23-10-31Z" fill="#E7A1B3" opacity=".65"/>
+  </g>
+
+  <!-- highlights -->
+  <path d="M330 388c26-48 66-78 111-82" fill="none" stroke="#FFF9F5" stroke-width="5" stroke-linecap="round" opacity=".18"/>
+  <path d="M323 862c-76 28-119 108-124 241" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity=".3"/>
+
+  <rect width="900" height="1125" filter="url(#grain)" opacity=".075" style="mix-blend-mode:multiply"/>
+</svg>

@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Mia's desk</title>
+  <desc id="desc">An illustrated desk with an open journal, coffee, tulips, a vintage camera and perfume.</desc>
+  <defs>
+    <linearGradient id="table" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBF0E9"/>
+      <stop offset=".55" stop-color="#F7E5E4"/>
+      <stop offset="1" stop-color="#EFDCE3"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2=".7" y2="1">
+      <stop offset="0" stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#F8EEE7"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E9F0EC" stop-opacity=".8"/>
+      <stop offset=".5" stop-color="#FFFDF9" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#DCE7E2" stop-opacity=".7"/>
+    </linearGradient>
+    <linearGradient id="coffee" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B9876B"/>
+      <stop offset="1" stop-color="#8C5B45"/>
+    </linearGradient>
+    <linearGradient id="leather" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C5960"/>
+      <stop offset="1" stop-color="#53383E"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#62454D" flood-opacity=".18"/>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".5"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1000" fill="url(#table)"/>
+  <path d="M0 0h470L150 1000H0Z" fill="#FFF9F5" opacity=".28"/>
+  <circle cx="830" cy="130" r="240" fill="#F8DDE5" opacity=".35" filter="url(#soft)"/>
+  <circle cx="70" cy="900" r="240" fill="#EAE2F3" opacity=".38" filter="url(#soft)"/>
+
+  <!-- tulips in a glass vase -->
+  <ellipse cx="160" cy="390" rx="105" ry="26" fill="#62454D" opacity=".1" filter="url(#soft)"/>
+  <g>
+    <path d="M132 366c-4-80 9-160 34-231" fill="none" stroke="#82906E" stroke-width="4" stroke-linecap="round"/>
+    <path d="M164 371c-2-73 14-145 42-203" fill="none" stroke="#7B8968" stroke-width="4" stroke-linecap="round"/>
+    <path d="M188 371c6-60 26-111 49-154" fill="none" stroke="#8D9B78" stroke-width="4" stroke-linecap="round"/>
+    <path d="M143 262c-31-22-56-12-69 19 31 12 56 4 69-19Z" fill="#8B9877"/>
+    <path d="M176 236c30-19 55-8 65 24-30 10-54-1-65-24Z" fill="#7D8B6D"/>
+    <g>
+      <path d="M133 144c-17-20-15-50 5-65 19 13 24 42 12 65Z" fill="#E0A0B0"/>
+      <path d="M181 143c16-20 14-50-5-65-19 13-24 42-12 65Z" fill="#D98FA5"/>
+      <path d="M157 91c-13 0-24 13-24 33 0 19 11 35 24 43 13-8 24-24 24-43 0-20-11-33-24-33Z" fill="#E7A1B3"/>
+    </g>
+    <g>
+      <path d="M210 182c-16-19-14-47 5-61 18 12 22 40 11 61Z" fill="#D98FA5"/>
+      <path d="M254 181c15-19 13-47-5-61-18 12-22 40-11 61Z" fill="#E3A9B6"/>
+      <path d="M232 132c-12 0-22 12-22 31 0 18 10 33 22 40 12-7 22-22 22-40 0-19-10-31-22-31Z" fill="#CB7C93"/>
+    </g>
+    <path d="M128 358h66l-10 55c-2 12-12 20-24 20s-22-8-24-20Z" fill="url(#glass)" stroke="#CBD8D1" stroke-width="2"/>
+    <path d="M139 370h42" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+    <path d="M143 378v25" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity=".55"/>
+  </g>
+
+  <!-- open journal -->
+  <g transform="rotate(-4 420 520)">
+    <ellipse cx="420" cy="537" rx="286" ry="217" fill="#62454D" opacity=".12" filter="url(#soft)"/>
+    <rect x="142" y="328" width="556" height="404" rx="18" fill="#DCC9C3"/>
+    <path d="M164 338h256v374H164c-10 0-18-8-18-18V356c0-10 8-18 18-18Z" fill="url(#page)"/>
+    <path d="M420 338h256c10 0 18 8 18 18v338c0 10-8 18-18 18H420Z" fill="url(#page)"/>
+    <path d="M420 338v374" stroke="#E3D2CB" stroke-width="2"/>
+    <path d="M182 380h208M182 412h188M182 444h202M182 476h210M182 508h194M182 540h205M182 572h183M182 604h198" stroke="#D8BFC0" stroke-width="2.5" stroke-linecap="round" opacity=".65"/>
+    <path d="M448 380h195M448 412h208M448 444h183M448 476h201M448 508h207M448 540h190M448 572h204M448 604h170" stroke="#D8BFC0" stroke-width="2.5" stroke-linecap="round" opacity=".65"/>
+    <path d="M182 641h122M448 641h88" stroke="#D8BFC0" stroke-width="2.5" stroke-linecap="round" opacity=".65"/>
+    <path d="M268 670c0-9 12-15 19-7l5 5 5-5c7-8 19-2 19 7 0 13-19 23-24 26-5-3-24-13-24-26Z" fill="#D98FA5" opacity=".75"/>
+    <path d="M600 338l-18 92-18-92Z" fill="#D98FA5" opacity=".8"/>
+    <path d="M158 323h264v15H158Z" fill="#EADDD5" opacity=".6"/>
+    <path d="M420 323h264v15H420Z" fill="#EADDD5" opacity=".6"/>
+  </g>
+
+  <!-- pen -->
+  <g transform="rotate(24 620 745)">
+    <rect x="552" y="735" width="216" height="16" rx="8" fill="#62454D"/>
+    <path d="M552 743l-30 18 30 8Z" fill="#D98FA5"/>
+    <rect x="730" y="735" width="38" height="16" rx="8" fill="#8E7379"/>
+    <rect x="582" y="738" width="104" height="4" rx="2" fill="#FFF9F5" opacity=".25"/>
+  </g>
+
+  <!-- coffee cup -->
+  <g>
+    <ellipse cx="712" cy="238" rx="118" ry="104" fill="#62454D" opacity=".1" filter="url(#soft)"/>
+    <ellipse cx="700" cy="218" rx="120" ry="108" fill="#FFF9F5"/>
+    <ellipse cx="700" cy="218" rx="112" ry="100" fill="#F8EFE9"/>
+    <circle cx="700" cy="212" r="79" fill="#FFFDF9"/>
+    <circle cx="700" cy="212" r="66" fill="url(#coffee)"/>
+    <path d="M665 198c15-17 43-20 63-5 17 13 24 34 16 51-8 18-30 29-51 24-22-6-37-28-33-50 1-8 3-14 5-20Z" fill="#C69B80" opacity=".55"/>
+    <path d="M700 228c0-13 17-21 27-11l7 7 7-7c10-10 27-2 27 11 0 18-26 31-34 36-8-5-34-18-34-36Z" fill="#F8E7DC" opacity=".9" transform="translate(-36 -30) scale(.95)"/>
+    <path d="M748 176c30 0 53 22 53 50s-23 50-53 50" fill="none" stroke="#FFF9F5" stroke-width="16"/>
+    <path d="M690 127c-9-17 14-25 8-42M719 122c-9-17 14-25 8-42" fill="none" stroke="#FFF9F5" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+  </g>
+
+  <!-- vintage camera -->
+  <g transform="rotate(-9 676 805)">
+    <ellipse cx="680" cy="855" rx="146" ry="46" fill="#62454D" opacity=".12" filter="url(#soft)"/>
+    <path d="M594 760h174c15 0 27 12 27 27v90c0 15-12 27-27 27H594c-15 0-27-12-27-27v-90c0-15 12-27 27-27Z" fill="url(#leather)"/>
+    <rect x="582" y="748" width="120" height="22" rx="10" fill="#8B6970"/>
+    <rect x="713" y="747" width="52" height="24" rx="8" fill="#F3E5DE"/>
+    <rect x="724" y="753" width="30" height="12" rx="4" fill="#D98FA5" opacity=".65"/>
+    <circle cx="679" cy="833" r="67" fill="#3E2A30"/>
+    <circle cx="679" cy="833" r="55" fill="#6C4E55"/>
+    <circle cx="679" cy="833" r="42" fill="#2F2328"/>
+    <circle cx="679" cy="833" r="25" fill="#8E7379"/>
+    <circle cx="679" cy="833" r="13" fill="#DCE7E2" opacity=".65"/>
+    <circle cx="664" cy="817" r="8" fill="#FFF9F5" opacity=".45"/>
+    <circle cx="746" cy="780" r="11" fill="#F3E5DE"/>
+    <rect x="610" y="774" width="34" height="16" rx="5" fill="#D98FA5"/>
+    <path d="M594 770c-55-31-91-4-109 40" fill="none" stroke="#62454D" stroke-width="8" stroke-linecap="round" opacity=".75"/>
+    <path d="M765 772c41-28 72-14 79 19" fill="none" stroke="#62454D" stroke-width="8" stroke-linecap="round" opacity=".75"/>
+  </g>
+
+  <!-- perfume bottle -->
+  <g>
+    <ellipse cx="205" cy="878" rx="93" ry="26" fill="#62454D" opacity=".1" filter="url(#soft)"/>
+    <rect x="155" y="753" width="100" height="126" rx="22" fill="#E8D8EF" stroke="#D4C0DF" stroke-width="2"/>
+    <rect x="168" y="775" width="74" height="80" rx="14" fill="#D98FA5" opacity=".38"/>
+    <rect x="187" y="720" width="36" height="38" rx="6" fill="#C7A075"/>
+    <rect x="196" y="703" width="18" height="22" rx="4" fill="#62454D"/>
+    <path d="M174 790c20 14 43 15 64 2" fill="none" stroke="#FFF9F5" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+    <path d="M205 800c0-8 11-14 18-7l5 5 5-5c7-7 18-1 18 7 0 12-17 21-23 24-6-3-23-12-23-24Z" fill="#FFF9F5" opacity=".75"/>
+    <rect x="182" y="745" width="46" height="10" rx="5" fill="#B89AC7" opacity=".6"/>
+  </g>
+
+  <!-- pressed flower and petals -->
+  <g fill="#D98FA5" opacity=".65">
+    <path d="M460 900c-15-17-13-41 4-53 16 11 19 35 9 53Z"/>
+    <path d="M499 899c14-17 12-41-5-53-16 11-19 35-9 53Z"/>
+    <path d="M480 861c-11 0-19 11-19 27 0 16 8 29 19 35 10-6 19-19 19-35 0-16-8-27-19-27Z"/>
+  </g>
+  <g fill="#8B9877" opacity=".7">
+    <path d="M480 900c-17 20-19 43-16 67 17-16 25-41 16-67Z"/>
+    <path d="M513 923c19 7 32 22 38 45-23-2-40-19-38-45Z"/>
+  </g>
+  <g fill="#D98FA5" opacity=".5">
+    <circle cx="781" cy="560" r="8"/>
+    <circle cx="807" cy="584" r="5"/>
+    <circle cx="263" cy="690" r="6"/>
+  </g>
+
+  <!-- tiny paper heart -->
+  <path d="M305 800c0-10 13-16 21-8l6 5 5-5c8-8 21-2 21 8 0 14-20 25-26 28-6-3-27-14-27-28Z" fill="#FFF9F5" stroke="#D98FA5" stroke-width="2"/>
+
+  <rect width="900" height="1000" filter="url(#grain)" opacity=".07" style="mix-blend-mode:multiply"/>
+</svg>

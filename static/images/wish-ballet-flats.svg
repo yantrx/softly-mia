@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Ballet flats and ribbon</title>
+  <desc id="desc">A pair of blush ballet flats with satin ribbons on a pale wooden floor beside a tulle skirt.</desc>
+  <defs>
+    <linearGradient id="ba-wall" x1="0" y1="0" x2=".5" y2="1">
+      <stop offset="0" stop-color="#FAF0EA"/>
+      <stop offset=".55" stop-color="#F6E4E4"/>
+      <stop offset="1" stop-color="#F0DBE2"/>
+    </linearGradient>
+    <linearGradient id="ba-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E7D2C1"/>
+      <stop offset="1" stop-color="#D8BCA9"/>
+    </linearGradient>
+    <linearGradient id="ba-shoe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F9DFE1"/>
+      <stop offset=".6" stop-color="#EFC3C9"/>
+      <stop offset="1" stop-color="#DCA3AE"/>
+    </linearGradient>
+    <linearGradient id="ba-satin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4D3D9"/>
+      <stop offset="1" stop-color="#D98FA5"/>
+    </linearGradient>
+    <linearGradient id="ba-tulle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBEFF1" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#EBC9D3" stop-opacity=".7"/>
+    </linearGradient>
+    <filter id="ba-shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#62454D" flood-opacity=".18"/>
+    </filter>
+    <filter id="ba-soft"><feGaussianBlur stdDeviation="22"/></filter>
+    <filter id="ba-grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".5"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1125" fill="url(#ba-wall)"/>
+  <rect y="648" width="900" height="477" fill="url(#ba-floor)"/>
+  <path d="M0 648h900" stroke="#C9A58C" stroke-width="4" opacity=".6"/>
+  <g stroke="#C9A58C" stroke-width="2" opacity=".35">
+    <path d="M180 648v477M440 648v477M700 648v477M0 760h900M0 920h900"/>
+  </g>
+
+  <!-- wall mirror -->
+  <g filter="url(#ba-shadow)">
+    <ellipse cx="448" cy="300" rx="206" ry="244" fill="#E3C1B4"/>
+    <ellipse cx="448" cy="300" rx="188" ry="226" fill="#E8EDED"/>
+    <ellipse cx="448" cy="300" rx="188" ry="226" fill="none" stroke="#FFF9F5" stroke-width="6" opacity=".65"/>
+    <path d="M330 216c24-58 80-96 146-100" fill="none" stroke="#FFF9F5" stroke-width="12" stroke-linecap="round" opacity=".55"/>
+    <path d="M586 390c-22 52-70 88-128 98" fill="none" stroke="#D7DEDE" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  </g>
+
+  <!-- light -->
+  <path d="M0 0h320L120 1125H0Z" fill="#FFF8E8" opacity=".42"/>
+
+  <!-- tulle skirt draped on chair right -->
+  <g filter="url(#ba-shadow)">
+    <path d="M646 470c66-26 122-14 160 38 30 42 34 108 10 168-34 86-92 150-166 192l-54-64c54-58 88-120 100-186 10-56 2-96-50-148Z" fill="url(#ba-tulle)"/>
+    <path d="M664 512c52 16 84 54 90 112 6 58-12 112-54 162" fill="none" stroke="#F7DFE4" stroke-width="8" opacity=".8"/>
+    <path d="M700 570c36 12 58 42 60 86M732 620c22 26 30 58 22 94" fill="none" stroke="#E9C3CD" stroke-width="4" opacity=".7"/>
+    <path d="M694 474c-16 34-16 68 0 100" fill="none" stroke="#D98FA5" stroke-width="10" stroke-linecap="round"/>
+    <path d="M684 508c-22-8-38-22-46-44 22-4 38 8 46 44ZM704 508c22-8 38-22 46-44-22-4-38 8-46 44Z" fill="#E3A9B6"/>
+  </g>
+
+  <!-- floor shadows -->
+  <ellipse cx="378" cy="890" rx="288" ry="70" fill="#B89078" opacity=".22" filter="url(#ba-soft)"/>
+
+  <!-- left shoe -->
+  <g filter="url(#ba-shadow)" transform="rotate(-12 330 756)">
+    <path d="M186 714c0-34 26-56 66-56 44 0 76 24 94 64 22 50 60 78 112 86 22 4 22 38-4 44-62 14-138 8-196-14-46-18-72-64-72-124Z" fill="url(#ba-shoe)"/>
+    <path d="M186 714c30 18 58 24 86 18" fill="none" stroke="#F8DADE" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+    <path d="M190 760c62 26 146 30 240 12" fill="none" stroke="#C98D98" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+    <!-- inner opening -->
+    <path d="M236 688c26-18 58-18 82 2 18 14 14 34-8 36-36 4-66-8-84-26Z" fill="#C98D98" opacity=".6"/>
+    <!-- ribbon -->
+    <path d="M236 686c-46-28-82-58-106-94" fill="none" stroke="url(#ba-satin)" stroke-width="11" stroke-linecap="round"/>
+    <path d="M128 580c-14-8-22-24-20-42 20 2 32 18 20 42ZM150 602c4-20 20-32 40-32 0 20-16 34-40 32Z" fill="#E3A9B6"/>
+  </g>
+
+  <!-- right shoe -->
+  <g filter="url(#ba-shadow)" transform="rotate(10 570 916)">
+    <path d="M398 912c0-36 28-58 70-58 46 0 80 26 100 68 22 48 60 74 110 82 22 4 22 38-4 44-64 14-142 6-200-16-48-18-76-62-76-120Z" fill="url(#ba-shoe)"/>
+    <path d="M400 958c64 26 150 28 246 10" fill="none" stroke="#C98D98" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+    <path d="M450 884c28-18 60-18 84 2 18 14 14 34-8 36-36 4-68-8-88-26Z" fill="#C98D98" opacity=".6"/>
+    <path d="M448 884c-44-30-78-62-100-100" fill="none" stroke="url(#ba-satin)" stroke-width="11" stroke-linecap="round"/>
+    <path d="M336 770c-16-8-24-24-22-44 22 4 34 20 22 44ZM360 792c4-20 20-34 42-34 0 22-18 36-42 34Z" fill="#E3A9B6"/>
+    <!-- bow -->
+    <path d="M470 866c16-18 36-20 52-4-14 18-34 20-52 4ZM470 866c-16-18-36-20-52-4 14 18 34 20 52 4Z" fill="#EBC3CD"/>
+    <circle cx="470" cy="866" r="9" fill="#D98FA5"/>
+  </g>
+
+  <!-- falling petals -->
+  <g fill="#E3A9B6" opacity=".7">
+    <path d="M150 260c14-12 28-8 32 8 4 16-8 28-24 26-16-2-22-20-8-34Z"/>
+    <path d="M772 258c12-10 24-6 28 8 4 14-8 24-20 22-14-2-20-18-8-30Z"/>
+    <path d="M86 430c10-8 20-4 22 8 2 12-8 20-18 18-12-2-16-16-4-26Z"/>
+    <path d="M820 700c10-8 20-4 22 8 2 12-8 20-18 18-12-2-16-16-4-26Z"/>
+  </g>
+
+  <!-- small perfume on floor -->
+  <g filter="url(#ba-shadow)">
+    <rect x="94" y="980" width="64" height="78" rx="12" fill="#F3DCE0" opacity=".9"/>
+    <rect x="110" y="954" width="32" height="32" rx="5" fill="#C9A56A"/>
+    <circle cx="126" cy="954" r="12" fill="#E4C48B"/>
+    <path d="M112 1008h28" stroke="#FFF9F5" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+  </g>
+
+  <rect width="900" height="1125" filter="url(#ba-grain)" opacity=".07" style="mix-blend-mode:multiply"/>
+</svg>

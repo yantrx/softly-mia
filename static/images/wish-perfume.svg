@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">A perfume bottle with peonies</title>
+  <desc id="desc">A blush glass perfume bottle on a marble ledge with soft pink peonies and silk ribbon.</desc>
+  <defs>
+    <linearGradient id="pf-wall" x1="0" y1="0" x2=".5" y2="1">
+      <stop offset="0" stop-color="#F8ECE6"/>
+      <stop offset=".55" stop-color="#F3DFE0"/>
+      <stop offset="1" stop-color="#EBD5DC"/>
+    </linearGradient>
+    <linearGradient id="pf-marble" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F9F2EA"/>
+      <stop offset=".5" stop-color="#EFE2D7"/>
+      <stop offset="1" stop-color="#E3D2C7"/>
+    </linearGradient>
+    <linearGradient id="pf-glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBECF0"/>
+      <stop offset=".45" stop-color="#F0CBD6"/>
+      <stop offset="1" stop-color="#DDA4B6"/>
+    </linearGradient>
+    <linearGradient id="pf-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EDD49B"/>
+      <stop offset="1" stop-color="#C7A05F"/>
+    </linearGradient>
+    <radialGradient id="pf-glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFF3D6" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#FFF3D6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pf-shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#62454D" flood-opacity=".18"/>
+    </filter>
+    <filter id="pf-soft"><feGaussianBlur stdDeviation="24"/></filter>
+    <filter id="pf-grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".5"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1125" fill="url(#pf-wall)"/>
+  <path d="M0 0h330L110 1125H0Z" fill="#FFF9ED" opacity=".38"/>
+
+  <!-- shelf / vanity -->
+  <rect y="804" width="900" height="321" fill="url(#pf-marble)"/>
+  <path d="M0 804h900" stroke="#D2BCAC" stroke-width="4"/>
+  <g stroke="#D8C6B7" stroke-width="2" opacity=".6" fill="none">
+    <path d="M0 878c94-20 176-18 246 6 74 26 142 24 204-6 66-32 140-32 222 0 56 22 132 22 228 0"/>
+    <path d="M0 966c76 22 150 20 222-6 74-26 146-24 216 6 68 28 146 28 234 0 66-20 142-20 228 0"/>
+    <path d="M64 836c46-10 92-8 138 6M548 1016c54-14 108-12 162 6"/>
+  </g>
+
+  <!-- glow -->
+  <ellipse cx="470" cy="520" rx="290" ry="320" fill="url(#pf-glow)"/>
+
+  <!-- big peony bouquet left -->
+  <g filter="url(#pf-shadow)">
+    <path d="M286 850c-18-156 8-272 78-348M292 846c64-84 132-134 204-150M278 846c-56-44-92-100-108-168" fill="none" stroke="#7D8B6D" stroke-width="7" stroke-linecap="round"/>
+    <path d="M312 676c-54 2-86 32-94 88 50 8 86-22 94-88Z" fill="#94A381"/>
+    <path d="M372 626c40-40 84-44 126-10-34 42-76 46-126 10Z" fill="#7D8B6D"/>
+    <path d="M230 700c-48-18-88-4-112 42 42 26 82 12 112-42Z" fill="#A8B393"/>
+    <!-- peonies -->
+    <g>
+      <circle cx="248" cy="474" r="76" fill="#F0C3CE"/>
+      <path d="M198 432c30-22 66-22 98 0M188 474c38-20 82-20 122 0M194 516c34 18 74 18 108 0M206 548c24 12 50 12 76 0" fill="none" stroke="#D98FA5" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+      <circle cx="248" cy="474" r="34" fill="#E3A9B6"/>
+      <circle cx="240" cy="466" r="12" fill="#F7DDE3"/>
+    </g>
+    <g>
+      <circle cx="382" cy="410" r="92" fill="#F4D5DC"/>
+      <path d="M320 362c38-24 82-24 122 0M308 410c44-24 98-24 146 0M314 458c40 22 88 22 132 0M330 500c30 14 62 14 94 0" fill="none" stroke="#D98FA5" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+      <circle cx="382" cy="410" r="44" fill="#EBB6C3"/>
+      <circle cx="370" cy="398" r="15" fill="#FBE9ED"/>
+    </g>
+    <g>
+      <circle cx="490" cy="468" r="66" fill="#EFC0CB"/>
+      <path d="M448 430c26-18 58-18 84 0M440 468c34-16 72-16 108 0M450 506c28 14 62 14 90 0" fill="none" stroke="#D98FA5" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+      <circle cx="490" cy="468" r="28" fill="#E3A9B6"/>
+    </g>
+    <!-- vase -->
+    <path d="M224 838c-6-64 12-102 54-114h162c42 12 60 50 54 114Z" fill="#EFDED5"/>
+    <path d="M250 824c-2-46 10-74 38-84M350 824c0-46-12-74-38-84" fill="none" stroke="#D8BEB6" stroke-width="4" opacity=".6"/>
+  </g>
+
+  <!-- perfume bottle -->
+  <g filter="url(#pf-shadow)" transform="rotate(2 610 660)">
+    <ellipse cx="606" cy="842" rx="150" ry="30" fill="#A97680" opacity=".25"/>
+    <!-- bottle -->
+    <path d="M486 526c0-36 28-62 64-62h124c36 0 64 26 64 62v238c0 42-32 72-74 72H560c-42 0-74-30-74-72Z" fill="url(#pf-glass)"/>
+    <path d="M500 548c40-16 80-18 120-6 44 12 82 10 114-4" fill="none" stroke="#FFF9F5" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+    <!-- label -->
+    <rect x="548" y="618" width="116" height="96" rx="8" fill="#FFF9F5" opacity=".9"/>
+    <path d="M578 650h56M578 670h36" stroke="#C28FA0" stroke-width="4" stroke-linecap="round"/>
+    <path d="M592 700c5-6 13-6 18 0 5-6 13-6 18 0 0 8-18 18-18 18s-18-10-18-18Z" fill="#D98FA5"/>
+    <!-- neck + cap -->
+    <rect x="566" y="422" width="80" height="62" rx="10" fill="url(#pf-gold)"/>
+    <rect x="580" y="392" width="52" height="42" rx="8" fill="#E6C687"/>
+    <rect x="588" y="344" width="36" height="60" rx="14" fill="#EFD49C"/>
+    <circle cx="606" cy="336" r="26" fill="#D9B36F"/>
+    <path d="M590 330c8-8 20-8 30 0" fill="none" stroke="#F6E8C4" stroke-width="4" stroke-linecap="round"/>
+    <!-- highlights -->
+    <path d="M504 590v160" stroke="#FFF9F5" stroke-width="9" stroke-linecap="round" opacity=".45"/>
+    <circle cx="708" cy="564" r="10" fill="#FFF9F5" opacity=".5"/>
+  </g>
+
+  <!-- silk ribbon -->
+  <g filter="url(#pf-shadow)">
+    <path d="M412 850c62-34 136-36 218 8 58 32 102 28 142-4 30-24 46-18 48 10 4 36-42 58-102 54-84-6-156-28-214-50-42-16-76-12-102 10Z" fill="#E9C3CD" opacity=".85"/>
+    <path d="M430 846c64-18 130-8 198 26" fill="none" stroke="#F7DDE3" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+  </g>
+
+  <!-- loose petals -->
+  <g fill="#E3A9B6" opacity=".75">
+    <path d="M742 906c18-14 36-8 40 12 4 20-12 34-32 30-18-4-24-26-8-42Z"/>
+    <path d="M192 948c14-12 30-8 34 10 4 16-10 28-26 24-16-4-20-20-8-34Z"/>
+    <path d="M770 734c12-10 26-6 28 10 2 14-10 24-22 20-14-4-16-20-6-30Z"/>
+    <path d="M126 640c12-10 26-6 28 10 2 14-10 24-22 20-14-4-16-20-6-30Z"/>
+  </g>
+
+  <!-- tiny gold tray with ring -->
+  <g filter="url(#pf-shadow)">
+    <ellipse cx="750" cy="1042" rx="102" ry="26" fill="#E4C48B"/>
+    <ellipse cx="750" cy="1034" rx="102" ry="26" fill="#EFD49C"/>
+    <ellipse cx="750" cy="1034" rx="82" ry="18" fill="none" stroke="#D9B36F" stroke-width="3"/>
+    <circle cx="742" cy="1030" r="18" fill="none" stroke="#F6E8C4" stroke-width="5"/>
+    <circle cx="742" cy="1010" r="7" fill="#FFF9F5"/>
+  </g>
+
+  <ellipse cx="450" cy="1110" rx="430" ry="30" fill="#8D6A5D" opacity=".12" filter="url(#pf-soft)"/>
+  <rect width="900" height="1125" filter="url(#pf-grain)" opacity=".07" style="mix-blend-mode:multiply"/>
+</svg>

@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.dear.title }} · softly, mia ♡{% endblock %}
+{% block description %}{{ t.dear.intro }}{% endblock %}
+{% block og_title %}{{ t.dear.title }} · softly, mia ♡{% endblock %}
+
+{% block content %}
+<section class="dear-section">
+    <div class="container dear-grid">
+        <div class="dear-copy">
+            <p class="eyebrow reveal">{{ t.dear.eyebrow }} <span aria-hidden="true">✧</span></p>
+            <h1 class="page-title reveal">{{ t.dear.title }}</h1>
+            <p class="page-intro reveal">{{ t.dear.intro }}</p>
+
+            <div class="dear-ideas reveal">
+                <p class="ideas-title">{{ t.dear.ideas_title }}</p>
+                <ul>
+                    {% for idea in t.dear.ideas %}
+                        <li><span aria-hidden="true">♡</span> {{ idea }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <p class="signature dear-signature reveal">{{ t.dear.signature }}</p>
+            <p class="dear-ps reveal">{{ t.dear.ps }}</p>
+        </div>
+
+        <div class="dear-panel">
+            {% if sent %}
+                <div class="success-card reveal" id="note">
+                    <span class="success-heart" aria-hidden="true">♡</span>
+                    <h2>{{ t.dear.success_title }}</h2>
+                    <p>{{ t.dear.success_body }}</p>
+                    <a class="btn btn--small" href="{{ url_for('dear_mia', lang=lang) }}">{{ t.dear.success_again }}</a>
+                </div>
+            {% else %}
+                <div class="form-card reveal" id="note">
+                    <div class="form-card-head">
+                        <span class="form-heart" aria-hidden="true">♡</span>
+                        <h2>{{ t.dear.form_title }}</h2>
+                    </div>
+
+                    {% if errors %}
+                        <div class="form-errors" role="alert">
+                            <ul>
+                                {% for error in errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+
+                    <form method="post" action="{{ url_for('dear_mia', lang=lang) }}" data-note-form>
+                        <div class="field">
+                            <label for="note-name">
+                                {{ t.dear.name_label }}
+                                <span class="field-optional">({{ t.dear.name_optional }})</span>
+                            </label>
+                            <input type="text" id="note-name" name="name" maxlength="60"
+                                   value="{{ form.name }}" placeholder="{{ t.dear.name_placeholder }}"
+                                   autocomplete="off">
+                        </div>
+
+                        <div class="field">
+                            <label for="note-message">
+                                {{ t.dear.message_label }}
+                                <span class="field-required" aria-hidden="true">*</span>
+                            </label>
+                            <textarea id="note-message" name="message" rows="7" maxlength="1000"
+                                      placeholder="{{ t.dear.message_placeholder }}"
+                                      required data-message>{{ form.message }}</textarea>
+                            <div class="field-foot">
+                                <span data-counter>0 / 1000</span>
+                                <span>{{ t.dear.chars }}</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn--wide" type="submit" data-submit>
+                            {{ t.dear.submit }}
+                        </button>
+                    </form>
+
+                    <p class="form-privacy">{{ t.dear.small_print }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

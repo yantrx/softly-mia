@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.not_found.title }} · softly, mia ♡{% endblock %}
+{% block description %}{{ t.not_found.body }}{% endblock %}
+
+{% block content %}
+<section class="not-found-section">
+    <div class="container not-found-inner">
+        <span class="not-found-heart" aria-hidden="true">♡</span>
+        <p class="eyebrow">{{ t.not_found.eyebrow }}</p>
+        <p class="not-found-code" aria-hidden="true">404</p>
+        <h1 class="page-title">{{ t.not_found.title }}</h1>
+        <p class="page-intro">{{ t.not_found.body }}</p>
+        <div class="not-found-actions">
+            <a class="btn" href="{{ url_for('index', lang=lang) }}">{{ t.not_found.home }}</a>
+            <a class="btn btn--ghost" href="{{ url_for('journal', lang=lang) }}">{{ t.not_found.journal }}</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

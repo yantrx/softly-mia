@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" role="img" aria-labelledby="title desc">
+  <title id="title">Paris, someday</title>
+  <desc id="desc">A Paris balcony with a small cafe table, croissant, coffee and the Eiffel Tower at sunrise.</desc>
+  <defs>
+    <linearGradient id="pa-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C9D3DD"/>
+      <stop offset=".45" stop-color="#EBCFD3"/>
+      <stop offset=".78" stop-color="#F8DFC8"/>
+      <stop offset="1" stop-color="#F4D3C4"/>
+    </linearGradient>
+    <linearGradient id="pa-stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F1E5DB"/>
+      <stop offset="1" stop-color="#DFCABB"/>
+    </linearGradient>
+    <filter id="pa-shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#62454D" flood-opacity=".18"/>
+    </filter>
+    <filter id="pa-soft"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="pa-grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".5"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1125" fill="url(#pa-sky)"/>
+  <circle cx="682" cy="298" r="88" fill="#FBE7C2" opacity=".85"/>
+  <circle cx="682" cy="298" r="130" fill="#FBE7C2" opacity=".22" filter="url(#pa-soft)"/>
+
+  <!-- clouds -->
+  <g fill="#FFF9F5" opacity=".45">
+    <ellipse cx="180" cy="236" rx="120" ry="26"/><ellipse cx="246" cy="218" rx="74" ry="22"/>
+    <ellipse cx="704" cy="452" rx="150" ry="22"/><ellipse cx="772" cy="436" rx="82" ry="18"/>
+  </g>
+
+  <!-- distant city -->
+  <g fill="#D8BFC0" opacity=".7">
+    <rect x="0" y="590" width="112" height="120"/><rect x="92" y="558" width="86" height="152"/>
+    <rect x="168" y="606" width="72" height="104"/><rect x="232" y="548" width="96" height="162"/>
+    <rect x="318" y="584" width="74" height="126"/><rect x="386" y="620" width="66" height="90"/>
+    <rect x="448" y="566" width="90" height="144"/><rect x="530" y="602" width="76" height="108"/>
+    <rect x="598" y="548" width="104" height="162"/><rect x="694" y="588" width="82" height="122"/>
+    <rect x="770" y="560" width="70" height="150"/><rect x="832" y="602" width="68" height="108"/>
+    <path d="M290 548l22-52 22 52ZM622 548l22-60 22 60Z"/>
+  </g>
+
+  <!-- Eiffel tower -->
+  <g fill="#B48D92" opacity=".9">
+    <path d="M452 172l10 42 28 288h-24l-14-120-16 120h-22l30-288Z"/>
+    <path d="M420 470h64l10 42h-84Z"/>
+    <path d="M406 560h92l18 70h-128Z"/>
+    <path d="M442 214h20v70h-20zM432 332h40v16h-40zM420 420h64v12h-64z"/>
+    <path d="M440 172h24l-4-28h-16Z"/>
+    <path d="M420 520h64M406 610h92" stroke="#B48D92" stroke-width="8"/>
+  </g>
+
+  <!-- foreground balcony -->
+  <rect y="712" width="900" height="413" fill="url(#pa-stone)"/>
+  <path d="M0 712h900" stroke="#D2B7A5" stroke-width="4"/>
+  <g fill="#E4D0C1" opacity=".8">
+    <rect x="0" y="756" width="900" height="2"/><rect x="0" y="812" width="900" height="2"/><rect x="0" y="868" width="900" height="2"/>
+    <rect x="80" y="712" width="3" height="413"/><rect x="196" y="712" width="3" height="413"/><rect x="312" y="712" width="3" height="413"/>
+    <rect x="428" y="712" width="3" height="413"/><rect x="544" y="712" width="3" height="413"/><rect x="660" y="712" width="3" height="413"/>
+    <rect x="776" y="712" width="3" height="413"/>
+  </g>
+
+  <!-- railing -->
+  <g stroke="#6E5968" stroke-width="7" stroke-linecap="round" filter="url(#pa-shadow)">
+    <path d="M74 660v232M172 648v244M270 648v244M368 648v244M466 648v244M564 648v244M662 648v244M760 648v244M858 660v232" opacity=".85"/>
+    <path d="M46 692h820M46 852h820" opacity=".8"/>
+    <circle cx="172" cy="648" r="10" fill="#6E5968"/><circle cx="270" cy="648" r="10" fill="#6E5968"/>
+    <circle cx="368" cy="648" r="10" fill="#6E5968"/><circle cx="466" cy="648" r="10" fill="#6E5968"/>
+    <circle cx="564" cy="648" r="10" fill="#6E5968"/><circle cx="662" cy="648" r="10" fill="#6E5968"/>
+    <circle cx="760" cy="648" r="10" fill="#6E5968"/>
+  </g>
+
+  <!-- cafe table -->
+  <g filter="url(#pa-shadow)">
+    <ellipse cx="318" cy="986" rx="180" ry="36" fill="#B89078" opacity=".28"/>
+    <ellipse cx="318" cy="742" rx="196" ry="56" fill="#FFF9F5"/>
+    <ellipse cx="318" cy="738" rx="196" ry="54" fill="#F3E2D6"/>
+    <path d="M294 780v180M342 780v180" stroke="#C8A28B" stroke-width="14" stroke-linecap="round"/>
+    <path d="M242 960h152" stroke="#C8A28B" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- coffee cup and croissant -->
+  <g filter="url(#pa-shadow)">
+    <ellipse cx="256" cy="728" rx="58" ry="15" fill="#B89078" opacity=".3"/>
+    <path d="M216 666h80v34c0 18-18 30-40 30s-40-12-40-30Z" fill="#FFF9F5"/>
+    <path d="M296 676c22 0 22 34 0 34" fill="none" stroke="#FFF9F5" stroke-width="10"/>
+    <ellipse cx="256" cy="666" rx="40" ry="12" fill="#C99C8D"/>
+    <path d="M234 646c-6-12 8-18 4-30M258 644c-6-12 8-18 4-30" fill="none" stroke="#FFF9F5" stroke-width="3.5" stroke-linecap="round" opacity=".7"/>
+  </g>
+  <g transform="rotate(-8 388 700)" filter="url(#pa-shadow)">
+    <path d="M348 702c0-22 24-32 52-32s52 10 52 32c0 16-24 24-52 24s-52-8-52-24Z" fill="#D9A96F"/>
+    <path d="M360 686c12-12 36-18 56-10M356 696c16-8 44-10 64-2M366 708c16 4 36 4 54 0" fill="none" stroke="#C28F55" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+  </g>
+
+  <!-- vase with tulips -->
+  <g filter="url(#pa-shadow)">
+    <path d="M520 644c-4 34 4 62 22 84M522 642c22 10 40 30 52 58M520 644c-16 18-26 40-30 66" fill="none" stroke="#7D8B6D" stroke-width="5" stroke-linecap="round"/>
+    <path d="M538 620c-16-8-24-22-22-40 18 2 28 16 22 40Z" fill="#D98FA5"/>
+    <path d="M560 632c6-18 20-28 38-28 0 18-14 30-38 28Z" fill="#E3A9B6"/>
+    <path d="M498 646c-14 2-24 12-28 28 16 2 28-8 28-28Z" fill="#CB7C93"/>
+    <path d="M500 706h88l-12 68h-64Z" fill="#E9D8D0"/>
+  </g>
+
+  <ellipse cx="460" cy="1060" rx="420" ry="40" fill="#B89078" opacity=".2" filter="url(#pa-soft)"/>
+  <rect width="900" height="1125" filter="url(#pa-grain)" opacity=".07" style="mix-blend-mode:multiply"/>
+</svg>

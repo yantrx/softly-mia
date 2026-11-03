@@ -1,0 +1,11 @@
+<button class="like-button" type="button"
+        data-like-button
+        data-slug="{{ post.slug }}"
+        data-endpoint="{{ url_for('toggle_like', lang=lang, slug=post.slug) }}"
+        data-likes="{{ post.likes }}"
+        aria-pressed="false"
+        aria-label="{{ t.common.like_label }} — {{ post.likes }} {{ t.common.likes_count }}">
+    <span class="like-heart" aria-hidden="true">♡</span>
+    <span class="like-count" data-like-count>{{ post.likes }}</span>
+    {% if show_like_word %}<span class="like-word">{{ t.common.likes_count }}</span>{% endif %}
+</button>

@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">A quiet morning stretch</title>
+  <desc id="desc">A sunlit corner with a sage yoga mat, plants, a folded blanket and a glass of water.</desc>
+  <defs>
+    <linearGradient id="we-wall" x1="0" y1="0" x2=".6" y2="1">
+      <stop offset="0" stop-color="#F6EEE5"/>
+      <stop offset=".55" stop-color="#EFE7E1"/>
+      <stop offset="1" stop-color="#E6E5DA"/>
+    </linearGradient>
+    <linearGradient id="we-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DFCAB9"/>
+      <stop offset="1" stop-color="#D2B7A5"/>
+    </linearGradient>
+    <linearGradient id="we-sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF3D6" stop-opacity=".9"/>
+      <stop offset=".7" stop-color="#FFF3D6" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#FFF3D6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="we-mat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B7C1A7"/>
+      <stop offset="1" stop-color="#95A487"/>
+    </linearGradient>
+    <filter id="we-shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#5A4C43" flood-opacity=".15"/>
+    </filter>
+    <filter id="we-soft"><feGaussianBlur stdDeviation="24"/></filter>
+    <filter id="we-grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".5"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#we-wall)"/>
+  <rect y="636" width="1200" height="264" fill="url(#we-floor)"/>
+  <path d="M0 636h1200" stroke="#C7AA97" stroke-width="4" opacity=".6"/>
+  <path d="M0 690h1200M0 800h1200" stroke="#CBB09E" stroke-width="3" opacity=".35"/>
+
+  <!-- arched window -->
+  <g filter="url(#we-shadow)">
+    <path d="M704 566V300c0-126 102-226 228-226s228 100 228 226v266Z" fill="#F8EFE7"/>
+    <path d="M728 550V302c0-113 92-204 204-204s204 91 204 204v248Z" fill="#E9EDE3"/>
+    <path d="M932 98v452M728 330h408" stroke="#F8EFE7" stroke-width="14"/>
+    <path d="M738 340c40-80 106-128 194-128 68 0 128 32 174 88" fill="none" stroke="#FFF9F5" stroke-width="5" opacity=".55"/>
+    <!-- garden -->
+    <g opacity=".7">
+      <path d="M728 520c42-54 78-82 112-88 42-8 76 18 104 54 28 34 64 38 104 12 26-18 52-16 88 22v60H728Z" fill="#9FAE8D"/>
+      <circle cx="822" cy="430" r="34" fill="#C4CDB3"/>
+      <circle cx="1042" cy="414" r="42" fill="#B9C4A9"/>
+    </g>
+    <path d="M760 550c44-72 100-112 172-112 88 0 148 42 194 112Z" fill="#879874" opacity=".6"/>
+  </g>
+
+  <!-- sunbeam -->
+  <path d="M932 104L318 900h430L1010 104Z" fill="url(#we-sun)" opacity=".7"/>
+  <path d="M1030 104L560 900h110L1100 104Z" fill="url(#we-sun)" opacity=".5"/>
+
+  <!-- plant left -->
+  <g filter="url(#we-shadow)">
+    <path d="M210 560c-8-110 12-200 62-272M216 558c48-84 100-146 164-190M228 560c-46-40-72-92-76-158" fill="none" stroke="#7D8B6D" stroke-width="6" stroke-linecap="round"/>
+    <path d="M272 430c-48-2-78 24-88 74 46 8 78-18 88-74Z" fill="#94A381"/>
+    <path d="M318 402c40-36 84-36 120 4-34 38-74 38-120-4Z" fill="#7D8B6D"/>
+    <path d="M254 490c-44 4-70 32-72 80 42 0 70-26 72-80Z" fill="#A8B393"/>
+    <path d="M346 468c42-20 80-10 104 32-38 24-76 14-104-32Z" fill="#8B9A79"/>
+    <path d="M194 560h128l-18 122H212Z" fill="#D9C0B1"/>
+    <path d="M204 580h108" stroke="#C8A897" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- small plants right -->
+  <g filter="url(#we-shadow)">
+    <path d="M1104 640c-4-52 8-90 36-114M1106 638c22-38 46-64 74-80" fill="none" stroke="#7D8B6D" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="1114" cy="592" rx="28" ry="16" transform="rotate(-38 1114 592)" fill="#94A381"/>
+    <ellipse cx="1152" cy="576" rx="26" ry="15" transform="rotate(22 1152 576)" fill="#7D8B6D"/>
+    <path d="M1082 638h58l-8 44h-42Z" fill="#E9D8D0"/>
+  </g>
+
+  <!-- folded blanket -->
+  <g filter="url(#we-shadow)">
+    <rect x="960" y="640" width="180" height="50" rx="16" fill="#F7E8E2"/>
+    <rect x="974" y="668" width="152" height="42" rx="15" fill="#EFD6D6"/>
+    <rect x="988" y="694" width="124" height="36" rx="14" fill="#F7E8E2"/>
+    <path d="M1010 664h84M1024 690h56M1038 714h28" stroke="#E2C9C9" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+  </g>
+
+  <!-- yoga mat -->
+  <g filter="url(#we-shadow)">
+    <path d="M216 822c-18-132 38-218 168-250 168-42 388-40 560 12 104 32 142 88 128 166-10 56-58 82-142 88-204 14-420 12-560-2-82-8-144-4-154-14Z" fill="url(#we-mat)"/>
+    <path d="M238 796c-10-110 42-180 158-208 162-40 372-38 538 10 94 28 128 76 118 142" fill="none" stroke="#F7EDE5" stroke-width="6" opacity=".45"/>
+    <path d="M292 826c-16-102 30-164 138-190 152-38 350-36 506 8 86 24 116 66 108 122" fill="none" stroke="#879877" stroke-width="4" opacity=".55"/>
+  </g>
+
+  <!-- glass of water and small journal on mat -->
+  <g filter="url(#we-shadow)">
+    <ellipse cx="596" cy="728" rx="46" ry="12" fill="#879877" opacity=".3"/>
+    <path d="M566 652h56v58c0 16-13 26-28 26s-28-10-28-26Z" fill="#EAF1EE" opacity=".9"/>
+    <path d="M566 668h56" stroke="#C9D8D0" stroke-width="3"/>
+    <path d="M624 662c14 0 14 26 0 26" fill="none" stroke="#DDE8E2" stroke-width="8"/>
+    <rect x="462" y="700" width="82" height="32" rx="5" fill="#FFF9F5" transform="rotate(-7 503 716)"/>
+    <path d="M476 714h52M478 722h38" stroke="#D9BFC0" stroke-width="3" stroke-linecap="round"/>
+    <rect x="520" y="734" width="118" height="18" rx="9" fill="#C99C8D" transform="rotate(6 579 743)"/>
+  </g>
+
+  <!-- cat silhouette sleeping by window -->
+  <g fill="#B98791" opacity=".6">
+    <ellipse cx="1042" cy="792" rx="78" ry="38"/>
+    <circle cx="1096" cy="774" r="28"/>
+    <path d="M1076 752l-8-22 26 12M1110 754l14-20 10 26" fill="#B98791"/>
+    <path d="M984 798c-30-10-48-26-48-48 24 3 43 18 48 48Z" fill="#A97680"/>
+  </g>
+
+  <ellipse cx="560" cy="880" rx="520" ry="46" fill="#7D6A5B" opacity=".15" filter="url(#we-soft)"/>
+  <rect width="1200" height="900" filter="url(#we-grain)" opacity=".07" style="mix-blend-mode:multiply"/>
+</svg>

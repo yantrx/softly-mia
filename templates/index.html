@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.meta.title }}{% endblock %}
+{% block og_title %}{{ t.meta.title }}{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <p class="eyebrow reveal">{{ t.home.eyebrow }} <span class="eyebrow-star" aria-hidden="true">✧</span></p>
+
+            <h1 class="hero-title reveal">
+                {{ t.home.hero_before }} <em>{{ t.home.hero_name }}</em><span class="hero-heart" aria-hidden="true">♡</span>
+            </h1>
+
+            <p class="hero-intro reveal">{{ t.home.intro }}</p>
+
+            <p class="hand-note reveal">
+                <span class="hand-arrow" aria-hidden="true">↳</span>
+                {{ t.home.note }}
+            </p>
+
+            <div class="hero-actions reveal">
+                <a class="btn" href="{{ url_for('journal', lang=lang) }}">{{ t.common.read_journal }} <span aria-hidden="true">→</span></a>
+                <a class="btn btn--ghost" href="{{ url_for('dear_mia', lang=lang) }}">{{ t.common.write_to_me }}</a>
+            </div>
+
+            <p class="hero-meta reveal">{{ t.home.meta }}</p>
+        </div>
+
+        <div class="hero-visual reveal">
+            <span class="decor decor-heart decor-heart--one" aria-hidden="true">♡</span>
+            <span class="decor decor-heart decor-heart--two" aria-hidden="true">♡</span>
+            <span class="decor decor-star" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                    <path d="M20 2c1.2 10.5 7.5 16.8 18 18-10.5 1.2-16.8 7.5-18 18-1.2-10.5-7.5-16.8-18-18C12.5 18.8 18.8 12.5 20 2Z" fill="currentColor"/>
+                </svg>
+            </span>
+
+            <div class="portrait-frame">
+                <img src="{{ url_for('static', filename='images/hero-mia.svg') }}"
+                     alt="A soft illustrated portrait of Mia holding a tulip" width="900" height="1125">
+                <span class="portrait-label" aria-hidden="true">mia ♡</span>
+            </div>
+
+            <div class="currently-card">
+                <p class="currently-label">{{ t.home.badge_title }}</p>
+                <ul>
+                    {% for item in t.home.badge_items %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <span class="hero-blob" aria-hidden="true"></span>
+        </div>
+    </div>
+</section>
+
+<section class="section latest-section">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow reveal">{{ t.home.latest_eyebrow }}</p>
+                <h2 class="section-title reveal">{{ t.home.latest_title }}</h2>
+            </div>
+            <a class="section-link reveal" href="{{ url_for('journal', lang=lang) }}">
+                {{ t.common.all_posts }} <span aria-hidden="true">→</span>
+            </a>
+        </div>
+
+        <div class="post-grid">
+            {% for post in latest_posts %}
+                {% include "partials/post_card.html" %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section topics-section">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow reveal">{{ t.home.topics_eyebrow }}</p>
+                <h2 class="section-title reveal">{{ t.home.topics_title }}</h2>
+            </div>
+            <p class="section-aside reveal">{{ count_notes(total_posts) }} <span aria-hidden="true">♡</span></p>
+        </div>
+
+        <div class="topic-grid">
+            {% for topic in topics %}
+                <a class="topic-card topic-card--{{ topic.key }} reveal" href="{{ topic.url }}">
+                    <span class="topic-number" aria-hidden="true">0{{ loop.index }}</span>
+                    <h3>{{ topic.label }}</h3>
+                    <p>{{ topic.description }}</p>
+                    <span class="topic-foot">
+                        <span>{{ count_notes(topic.count) }}</span>
+                        <span class="topic-arrow" aria-hidden="true">↗</span>
+                    </span>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section about-section">
+    <div class="container">
+        <div class="about-panel">
+            <div class="about-media reveal">
+                <span class="tape tape--top" aria-hidden="true"></span>
+                <img src="{{ url_for('static', filename='images/about-desk.svg') }}"
+                     alt="A cozy desk with an open journal, coffee, flowers and a film camera" width="900" height="1000" loading="lazy">
+                <span class="about-sticker" aria-hidden="true">hi, you ♡</span>
+            </div>
+
+            <div class="about-copy">
+                <p class="eyebrow reveal">{{ t.home.about_eyebrow }}</p>
+                <h2 class="section-title reveal">{{ t.home.about_title }}</h2>
+                <p class="reveal">{{ t.home.about_p1 }}</p>
+                <p class="reveal">{{ t.home.about_p2 }}</p>
+
+                <ul class="about-facts reveal">
+                    {% for fact in t.home.about_facts %}
+                        <li><span aria-hidden="true">♡</span> {{ fact }}</li>
+                    {% endfor %}
+                </ul>
+
+                <div class="about-foot reveal">
+                    <a class="btn btn--small" href="{{ url_for('journal', lang=lang) }}">{{ t.home.about_link }} <span aria-hidden="true">→</span></a>
+                    <p class="signature">{{ t.home.signature }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quote-band">
+    <div class="container quote-band-inner">
+        <span class="quote-mark" aria-hidden="true">♡</span>
+        <blockquote class="reveal">{{ t.home.quote }}</blockquote>
+        <p class="quote-by reveal">{{ t.home.quote_by }}</p>
+    </div>
+</section>
+{% endblock %}

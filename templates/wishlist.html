@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}{{ t.wishlist.title }} · softly, mia ♡{% endblock %}
+{% block description %}{{ t.wishlist.intro }}{% endblock %}
+{% block og_title %}{{ t.wishlist.title }} · softly, mia ♡{% endblock %}
+
+{% block content %}
+<section class="page-hero page-hero--wishlist">
+    <div class="container page-hero-inner">
+        <p class="eyebrow reveal">{{ t.wishlist.eyebrow }} <span aria-hidden="true">✧</span></p>
+        <h1 class="page-title reveal">{{ t.wishlist.title }}</h1>
+        <p class="page-intro reveal">{{ t.wishlist.intro }}</p>
+        <span class="page-hero-heart" aria-hidden="true">♡</span>
+    </div>
+</section>
+
+<section class="section section--tight">
+    <div class="container">
+        <div class="wishlist-heading reveal">
+            <span class="wishlist-label">{{ t.wishlist.board }}</span>
+            <span class="wishlist-line" aria-hidden="true"></span>
+            <span class="wishlist-count">{{ items|length }} {{ t.wishlist.count }}</span>
+        </div>
+
+        <div class="wishlist-grid">
+            {% for item in items %}
+                <figure class="wish-card reveal">
+                    <div class="wish-media">
+                        <img src="{{ url_for('static', filename=item.image) }}" alt=""
+                             width="900" height="1125" loading="lazy" decoding="async">
+                        <span class="wish-number" aria-hidden="true">{{ item.number }}</span>
+                        <span class="wish-tag">{{ t.common.someday }}</span>
+                    </div>
+                    <figcaption class="wish-caption">
+                        <h2>{{ item.title }}</h2>
+                        <p>{{ item.note }}</p>
+                    </figcaption>
+                </figure>
+            {% endfor %}
+        </div>
+
+        <p class="wishlist-note reveal">
+            <span aria-hidden="true">♡</span> {{ t.wishlist.note }}
+        </p>
+    </div>
+</section>
+{% endblock %}
